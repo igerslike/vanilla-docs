@@ -1,0 +1,38 @@
+{
+  "name": "vanilla-docs",
+  "version": "1.0.0",
+  "description": "Vanilla Components  Documentation",
+  "main": "index.js",
+  "repository": "https://github.com/igerslike/vanilla-docs.git",
+  "author": "jon <support@indigit.pt>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "docs:dev": "vuepress dev docs -p=3000",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.36",
+    "@vuepress/bundler-vite": "^2.0.0-beta.27",
+    "@vuepress/bundler-webpack": "^2.0.0-beta.27",
+    "@vuepress/cli": "^2.0.0-alpha.8",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.27",
+    "@vuepress/utils": "^2.0.0-alpha.1",
+    "markdown-it-include": "^2.0.0",
+    "vue-shadow-dom": "^4.0.0",
+    "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
+    "autoprefixer": "^10.3.7",
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "tailwindcss": "^3.0.16",
+    "mini-svg-data-uri": "^1.4.3",
+    "vuepress-plugin-demoblock-plus": "^1.5.1",
+    "@com/some-npm-package-angular": "file:../some-npm-package-angular/dist"
+  }
+
+}
