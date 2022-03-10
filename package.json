@@ -23,7 +23,7 @@
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
-    "autoprefixer": "^10.3.7",
+    "autoprefixer": "^10.3.7"
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -32,7 +32,7 @@
     "tailwindcss": "^3.0.16",
     "mini-svg-data-uri": "^1.4.3",
     "vuepress-plugin-demoblock-plus": "^1.5.1",
-    "@com/some-npm-package-angular": "file:../some-npm-package-angular/dist"
+    "@indigit/vanilla-components": "^0.6.0"
   }
 
 }

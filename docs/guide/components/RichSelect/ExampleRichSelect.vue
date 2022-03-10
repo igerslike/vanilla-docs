@@ -205,7 +205,7 @@
 
 
 <script setup lang="ts">
-import { VanillaRichSelect } from '@/index';
+import { VanillaRichSelect } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 import VanillaRichSelectOptionWithImage from '@/components/RichSelect/RichSelectOptionWithImage/RichSelectOptionWithImage.vue';
 import VanillaRichSelectOptionWithIndicators from '@/components/RichSelect/RichSelectOptionWithIndicators/RichSelectOptionWithIndicators.vue';

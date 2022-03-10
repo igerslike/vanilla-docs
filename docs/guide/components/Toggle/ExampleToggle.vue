@@ -56,7 +56,7 @@
 
 
 <script setup type="ts">
-import { VanillaToggle } from '@/index';
+import { VanillaToggle } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleToggle' });

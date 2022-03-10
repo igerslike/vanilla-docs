@@ -36,7 +36,7 @@
 
 
 <script setup type="ts">
-import { VanillaDialog } from '@/index';
+import { VanillaDialog } from '@indigit/vanilla-components';
 import { onMounted, defineComponent, ref } from 'vue';
 import VanillaButton from '@/components/Button/Button.vue';
 

@@ -27,7 +27,7 @@
 
 
 <script setup type="ts">
-import { VanillaDropdown, VanillaDropdownOption } from '@/index';
+import { VanillaDropdown, VanillaDropdownOption } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 import { DuplicateIcon, CheckCircleIcon } from '@heroicons/vue/solid';
 

@@ -24,7 +24,7 @@
 
 
 <script setup type="ts">
-import { VanillaTextarea } from '@/index';
+import { VanillaTextarea } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleTextarea' });

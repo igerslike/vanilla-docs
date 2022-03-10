@@ -48,7 +48,7 @@
 
 
 <script setup type="ts">
-import { VanillaPhoneNumber } from '@/index';
+import { VanillaPhoneNumber } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent, nextTick } from 'vue';
 
 defineComponent({ name: 'ExamplePhoneNumber' });

@@ -61,7 +61,7 @@
 
 
 <script setup lang="ts">
-import { VanillaSelect } from '@/index';
+import { VanillaSelect } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleSelect' });

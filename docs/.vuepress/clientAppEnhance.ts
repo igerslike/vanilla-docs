@@ -1,12 +1,10 @@
 import { defineClientAppEnhance } from '@vuepress/client'
-import { VanillaComponentConfiguration }  from "@/core/types";
-import { VanillaComponents } from "@/index";
+import { VanillaComponents } from "@indigit/vanilla-components";
 
 export default defineClientAppEnhance(({ app, router, siteData }) => {
 
-  const configuration: VanillaComponentConfiguration = {
+  const configuration = {
     VanillaInput: {
-      ///classes: 'border-yellow-500',
       placeholder: 'Elon Musky'
     },
   };

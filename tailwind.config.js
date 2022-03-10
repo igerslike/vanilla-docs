@@ -9,7 +9,7 @@ module.exports = {
     './docs/.vuepress/theme/**/*.{js,jsx,ts,tsx,vue}',
     './docs/.vuepress/*.{js,jsx,ts,tsx,vue}',
     './docs/guide/**/*.{js,jsx,ts,tsx,vue,md}',
-    './src/**/*.{js,jsx,ts,tsx,vue}',
+    './node_modules/@indigit/vanilla-components/src/**/*.{js,jsx,ts,tsx,vue}',
   ],
   theme: {
     colors: {

@@ -75,7 +75,7 @@
 
 
 <script setup type="ts">
-import { VanillaButton } from '@/index';
+import { VanillaButton } from '@indigit/vanilla-components';
 import { onMounted, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleButton' });

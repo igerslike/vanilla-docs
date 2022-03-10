@@ -32,7 +32,7 @@
 
 
 <script setup type="ts">
-import { VanillaSelectCountry } from '@/index';
+import { VanillaSelectCountry } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleSelectCountry' });

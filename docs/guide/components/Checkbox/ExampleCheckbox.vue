@@ -57,7 +57,7 @@
 
 
 <script setup type="ts">
-import { VanillaCheckbox } from '@/index';
+import { VanillaCheckbox } from '@indigit/vanilla-components';
 import { onMounted, ref, reactive, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleCheckbox' });

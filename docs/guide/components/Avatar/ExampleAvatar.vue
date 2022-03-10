@@ -29,7 +29,7 @@
 
 
 <script setup type="ts">
-import { VanillaAvatar } from '@/index';
+import { VanillaAvatar } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleAvatar' });
