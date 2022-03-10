@@ -32,7 +32,6 @@
     "tailwindcss": "^3.0.16",
     "mini-svg-data-uri": "^1.4.3",
     "vuepress-plugin-demoblock-plus": "^1.5.1",
-    "@indigit/vanilla-components": "^0.6.0"
+    "@indigit/vanilla-components": "file:../vanilla-components"
   }
-
 }

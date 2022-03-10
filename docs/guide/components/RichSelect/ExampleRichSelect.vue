@@ -205,11 +205,13 @@
 
 
 <script setup lang="ts">
-import { VanillaRichSelect } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
-import VanillaRichSelectOptionWithImage from '@/components/RichSelect/RichSelectOptionWithImage/RichSelectOptionWithImage.vue';
-import VanillaRichSelectOptionWithIndicators from '@/components/RichSelect/RichSelectOptionWithIndicators/RichSelectOptionWithIndicators.vue';
-import VanillaRichSelectTagWithImage from '@/components/RichSelect/RichSelectTagWithImage/RichSelectTagWithImage.vue';
+import {
+		VanillaRichSelect,
+		VanillaRichSelectOptionWithImage,
+		VanillaRichSelectOptionWithIndicators,
+		VanillaRichSelectTagWithImage
+} from '@indigit/vanilla-components';
 
 defineComponent({ name: 'ExampleRichSelect' });
 onMounted(() => window.parent.postMessage('mounted', '*'));

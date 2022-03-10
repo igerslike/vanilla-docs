@@ -36,9 +36,8 @@
 
 
 <script setup type="ts">
-import { VanillaDialog } from '@indigit/vanilla-components';
+import { VanillaDialog , VanillaButton } from '@indigit/vanilla-components';
 import { onMounted, defineComponent, ref } from 'vue';
-import VanillaButton from '@/components/Button/Button.vue';
 
 defineComponent({ name: 'ExampleDialog' });
 onMounted(() => window.parent.postMessage('mounted', '*'));
