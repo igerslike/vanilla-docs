@@ -93,6 +93,9 @@ export default {
   bundler: '@vuepress/bundler-vite',
   bundlerConfig: {
       viteOptions: {
+        optimizeDeps: {
+          //exclude: ['@indigit/vanilla-components']
+        },
         resolve: {
           alias: [
             //{ find: '@', replacement: path.resolve(__dirname,'./../../src') }

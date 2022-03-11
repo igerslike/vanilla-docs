@@ -30,7 +30,6 @@ Slots Available for this Component
 !!!include(./docs/guide/includes/slots-default.md)!!!
 
 ## Example & Snippet
-:::demo
 ```vue
 <template>
     <VanillaCheckbox 
@@ -53,7 +52,6 @@ export default defineComponent({
 });
 </script>
 ```
-:::
 
 ## Preview
 <wrapper src="components/Checkbox/demo" />

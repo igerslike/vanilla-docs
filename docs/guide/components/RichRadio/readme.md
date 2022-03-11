@@ -29,7 +29,6 @@ Slots Available for this Component
 !!!include(./docs/guide/includes/slots-default.md)!!!
 
 ## Example & Snippet
-:::demo
 ```vue
 <template>
     <VanillaRichRadio 
@@ -55,7 +54,6 @@ export default defineComponent({
 });
 </script>
 ```
-:::
 
 ## Preview
 <wrapper src="components/RichRadio/demo" />

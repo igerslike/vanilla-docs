@@ -29,7 +29,6 @@ Slots Available for this Component
 !!!include(./docs/guide/includes/slots-default.md)!!!
 
 ## Example & Snippet
-:::demo
 ```vue
 <template>
     <VanillaAvatar 
@@ -54,7 +53,6 @@ export default defineComponent({
 });
 </script>
 ```
-:::
 
 ## Preview
 <wrapper src="components/Avatar/demo" />
