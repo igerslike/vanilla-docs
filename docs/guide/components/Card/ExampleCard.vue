@@ -5,24 +5,27 @@
       title="Payment Methods"
       subtitle="Here you can have your favorite payments methods"
     >
+
 		    <template #actions>
-				    <!-- Regular -->
-				    <VanillaDropdown
-						    text="Options"
-				    >
-						    <!-- Option -->
+				    <VanillaDropdown text="Options">
 						    <VanillaDropdownOption>
 								    <span>Copy Stuff</span>
 						    </VanillaDropdownOption>
-						    <!-- Option -->
 						    <VanillaDropdownOption>
 								    <span>Mark as Done</span>
 						    </VanillaDropdownOption>
 				    </VanillaDropdown>
 		    </template>
+
 		    <div class="p-5 text-sm">
 				    <span>Some content on the card</span>
 		    </div>
+
+
+		    <VanillaCardFooter class="space-x-2">
+				    <VanillaButton label="Resets"/>
+				    <VanillaButton label="Submit" variant="primary"/>
+		    </VanillaCardFooter>
 
     </VanillaCard>
   </div>
@@ -30,7 +33,13 @@
 
 
 <script setup type="ts">
-import { VanillaCard, VanillaButton, VanillaDropdown, VanillaDropdownOption } from '@indigit/vanilla-components';
+import {
+		VanillaCard,
+		VanillaDropdown,
+		VanillaDropdownOption,
+		VanillaCardFooter,
+		VanillaButton,
+} from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
 defineComponent({ name: 'ExampleCard' });
