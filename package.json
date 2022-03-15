@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "docs:dev": "vuepress dev docs -p=3000",
+    "docs:dev": "yarn link \"@indigit/vanilla-components\" && vuepress dev docs -p=3000",
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
@@ -31,6 +31,6 @@
     "tailwindcss": "^3.0.16",
     "mini-svg-data-uri": "^1.4.3",
     "vuepress-plugin-demoblock-plus": "^1.5.1",
-    "@indigit/vanilla-components": "0.6.13"
+    "@indigit/vanilla-components": "0.6.14"
   }
 }
