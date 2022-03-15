@@ -12,20 +12,19 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.36",
     "@vuepress/bundler-vite": "^2.0.0-beta.27",
     "@vuepress/bundler-webpack": "^2.0.0-beta.27",
     "@vuepress/cli": "^2.0.0-alpha.8",
     "@vuepress/plugin-register-components": "^2.0.0-beta.27",
     "@vuepress/utils": "^2.0.0-alpha.1",
     "markdown-it-include": "^2.0.0",
-    "vue-shadow-dom": "^4.0.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "autoprefixer": "^10.3.7"
   },
   "dependencies": {
+    "vuepress": "^2.0.0-beta.36",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.0",
