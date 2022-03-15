@@ -38,16 +38,17 @@
   resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-1.0.6.tgz#d8b90734b436eb5a87f40cc300b64a0fb0031f7f"
   integrity sha512-ng2YcCQrdoQWEFpw+ipFl2rZo8mZ56v0T5+MyfQQvNqfKChwgP6DMloZLW+rl17GEcHkE3H82UTAMKBKZr4+WA==
 
-"@indigit/vanilla-components@0.6.11":
-  version "0.6.11"
-  resolved "https://registry.yarnpkg.com/@indigit/vanilla-components/-/vanilla-components-0.6.11.tgz#19f95bcdad8ac5131eaa8dcac00f4b63a0e33af2"
-  integrity sha512-fjWpKGVoVfMvY13YAdYK/HovHDEx2pCD2XxyDI40X3lUYWx7HMcpIlb3uC//PofkM1wRxuK/IsnIu7mAsNqCHA==
+"@indigit/vanilla-components@0.6.13":
+  version "0.6.13"
+  resolved "https://registry.yarnpkg.com/@indigit/vanilla-components/-/vanilla-components-0.6.13.tgz#af8e891833ba7d8fc9d4243d5476d863a059bf88"
+  integrity sha512-3tqWNAlK7zC6vEbDa12+xDFIJjpRhqwXQWOgmekhBxqsBxD+5MXcl7LBIqHKq7+c0lFi280ESFunQgZOtDtSLQ==
   dependencies:
     "@headlessui/vue" "^1.5.0"
     "@heroicons/vue" "^1.0.1"
     "@popperjs/core" "^2.11.2"
     "@variantjs/vue" "^0.0.21"
     flatpickr "^4.6.9"
+    fuse.js "^6.4.6"
     libphonenumber-js "^1.9.49"
     moment-timezone "^0.5.34"
     vue "^3.2.31"
@@ -2261,6 +2262,11 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
+fuse.js@^6.4.6:
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-6.5.3.tgz#7446c0acbc4ab0ab36fa602e97499bdb69452b93"
+  integrity sha512-sA5etGE7yD/pOqivZRBvUBd/NaL2sjAu6QuSaFoe1H2BrJSkH/T/UXAJ8CdXdw7DvY3Hs8CXKYkDWX7RiP5KOg==
 
 get-intrinsic@^1.0.2:
   version "1.1.1"

@@ -4,11 +4,9 @@
   </div>
 </template>
 <script>
-import {ShadowRoot} from 'vue-shadow-dom/shadow';
 import '../styles/main.pcss';
 export default {
   components: {
-    ShadowRoot
   },
 }
 </script>
