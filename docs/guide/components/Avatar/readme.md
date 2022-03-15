@@ -22,7 +22,7 @@ Events Emmit for this Component
 
 ## Slots
 
-Slots Available for this Component
+Slots Available for this Components
 
 | Name | Description | Parameters |
 |:-----|:------------|:-----------|
