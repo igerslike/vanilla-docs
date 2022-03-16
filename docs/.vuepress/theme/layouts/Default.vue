@@ -2,7 +2,7 @@
   <Layout></Layout>
 </template>
 <script>
-import '../styles/main.pcss';
+// import '../styles/main.pcss';
 import Layout from '@vuepress/theme-default/lib/client/layouts/Layout.vue'
 export default {
   components: {

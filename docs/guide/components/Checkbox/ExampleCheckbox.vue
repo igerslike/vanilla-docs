@@ -66,5 +66,4 @@ onMounted(() => window.parent.postMessage('mounted', '*'));
 const value = ref('accepted');
 const value2 = ref(true);
 const valueMultiple = ref([]);
-//const valueMultiple = reactive({});
 </script>

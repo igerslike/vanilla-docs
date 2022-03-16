@@ -40,6 +40,7 @@ export default {
           { text: 'Dropdown', link: '/guide/components/Dropdown' },
           { text: 'Dialog ( Modal )', link: '/guide/components/Dialog' },
           { text: 'Card', link: '/guide/components/Card' },
+          { text: 'Input Group', link: '/guide/components/InputGroup' },
         ],
       },
     ],

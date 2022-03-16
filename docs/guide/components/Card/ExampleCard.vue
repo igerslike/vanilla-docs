@@ -5,7 +5,6 @@
       title="Payment Methods"
       subtitle="Here you can have your favorite payments methods"
     >
-
 		    <template #actions>
 				    <VanillaDropdown text="Options">
 						    <VanillaDropdownOption>
@@ -21,12 +20,10 @@
 				    <span>Some content on the card</span>
 		    </div>
 
-
-		    <VanillaCardFooter class="space-x-2">
+		    <template #footerActions>
 				    <VanillaButton label="Resets"/>
 				    <VanillaButton label="Submit" variant="primary"/>
-		    </VanillaCardFooter>
-
+		    </template>
     </VanillaCard>
   </div>
 </template>
