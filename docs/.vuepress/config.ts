@@ -41,6 +41,7 @@ export default {
           { text: 'Dialog ( Modal )', link: '/guide/components/Dialog' },
           { text: 'Card', link: '/guide/components/Card' },
           { text: 'Input Group', link: '/guide/components/InputGroup' },
+          { text: 'Datatables', link: '/guide/components/Datatables' },
         ],
       },
     ],
