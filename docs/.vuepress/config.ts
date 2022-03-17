@@ -69,6 +69,9 @@ export default {
   bundler: '@vuepress/bundler-vite',
   bundlerConfig: {
       viteOptions: {
+        global: {
+
+        },
         optimizeDeps: {
           //exclude: ['@indigit/vanilla-components']
         },

@@ -8,7 +8,8 @@
 				:actions="actions"
 				:per-page-options="perPageItemsOptions"
 				:filters="filters"
-				:fetch-data="fetchData"
+				:fetch-endpoint="'/datatable/rest'"
+				:actions-endpoint="'/datatable/actions'"
 		/>
 </template>
 <script type="ts">
@@ -119,6 +120,16 @@ export default defineComponent({
 								options: [],
 								rules: []
 						},
+						{
+								name: 'name',
+								label: 'Filter by ID',
+								component: 'VanillaInputText',
+								placeholder: 'Ex: 1,2,3',
+								value: undefined,
+								defaultValue: undefined,
+								options: [],
+								rules: []
+						},
 				]
 
 				// Translations
@@ -157,6 +168,13 @@ export default defineComponent({
 						{value: 300, label: '300 Items per page'},
 				]
 
+				const poolingOptions = {
+						enable: false,
+						interval: 5,
+						during: 60,
+						stopWhenDataChanges: true,
+				};
+
 				const config = {
 						columns: columns,
 						options: options,
@@ -164,7 +182,8 @@ export default defineComponent({
 						actions: actions,
 						filters: filters,
 						perPageItemsOptions: perPageItemsOptions,
-						fetchData: fetchData,
+						pooling: poolingOptions,
+						//fetchData: fetchData,
 				};
 
 				return {
@@ -174,6 +193,7 @@ export default defineComponent({
 						actions,
 						filters,
 						perPageItemsOptions,
+						poolingOptions,
 						fetchData,
 						config
 				}
