@@ -24,6 +24,7 @@
     "postcss-nested": "^5.0.6"
   },
   "dependencies": {
+    "@faker-js/faker": "^6.0.0",
     "@indigit/vanilla-components": "0.6.16",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
@@ -32,6 +33,7 @@
     "miragejs": "^0.1.43",
     "msw": "^0.39.2",
     "node-ray": "^1.18.0",
+    "paginatedjs": "^1.1.1",
     "tailwindcss": "^3.0.16",
     "vuepress": "^2.0.0-beta.36",
     "vuepress-plugin-demoblock-plus": "^1.5.1"

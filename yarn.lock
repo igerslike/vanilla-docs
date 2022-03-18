@@ -28,6 +28,11 @@
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.17.3.tgz"
   integrity sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==
 
+"@faker-js/faker@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@faker-js/faker/-/faker-6.0.0.tgz#b613ebf5f5ebb2ab987afb567d8b7fe860199c13"
+  integrity sha512-10zLCKhp3YEmBuko71ivcMoIZcCLXgQVck6aNswX+AWwaek/L8S3yz9i8m3tHigRkcF6F2vI+qtdtyySHK+bGA==
+
 "@headlessui/vue@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.5.0.tgz#8cd4877d3d344e482073a04ae8e3b7f987bb267c"
@@ -3669,6 +3674,11 @@ p-retry@^4.5.0:
   dependencies:
     "@types/retry" "^0.12.0"
     retry "^0.13.1"
+
+paginatedjs@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/paginatedjs/-/paginatedjs-1.1.1.tgz#b52304423cef816c11ad97a0f4bc8b7453dc628c"
+  integrity sha512-JNoM7FBDNAD4D2srzy2iX57Cv7uN0aAezygYzrjkAS/Y49MTPRoe2jFW+yEqnaKzXfvVs4sYpKaAe8F99hRZJA==
 
 param-case@^3.0.4:
   version "3.0.4"

@@ -1,4 +1,5 @@
 import { defineClientAppEnhance } from '@vuepress/client'
+// @ts-ignore
 import { VanillaComponents } from "@indigit/vanilla-components";
 import { makeServer } from "../mocks/server";
 

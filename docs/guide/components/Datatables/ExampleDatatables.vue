@@ -1,16 +1,18 @@
 <template>
-		<VanillaDatatable
-				:config="config"
-				:unique-name="'payments'"
-				:columns="columns"
-				:options="options"
-				:translations="translations"
-				:actions="actions"
-				:per-page-options="perPageItemsOptions"
-				:filters="filters"
-				:fetch-endpoint="'/datatable/rest'"
-				:actions-endpoint="'/datatable/actions'"
-		/>
+		<div class="h-[500px]">
+				<VanillaDatatable
+						:config="config"
+						:unique-name="'payments'"
+						:columns="columns"
+						:options="options"
+						:translations="translations"
+						:actions="actions"
+						:per-page-options="perPageItemsOptions"
+						:filters="filters"
+						:fetch-endpoint="'/datatable/rest'"
+						:actions-endpoint="'/datatable/actions'"
+				/>
+		</div>
 </template>
 <script type="ts">
 import {VanillaDatatable} from '@indigit/vanilla-components';
@@ -58,8 +60,26 @@ export default defineComponent({
 								raw: false,
 						},
 						{
-								name: 'name',
-								label: 'Name',
+								name: 'gateway',
+								label: 'Gateway',
+								sortable: true,
+								native: true,
+								hidden: false,
+								defaultSortAs: undefined,
+								raw: false,
+						},
+						{
+								name: 'amount',
+								label: 'Amount',
+								sortable: true,
+								native: true,
+								hidden: false,
+								defaultSortAs: undefined,
+								raw: false,
+						},
+						{
+								name: 'status',
+								label: 'Status',
 								sortable: true,
 								native: true,
 								hidden: false,
