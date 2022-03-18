@@ -2,13 +2,22 @@ import {createServer, Model, Factory, Request} from "miragejs";
 // @ts-ignore
 import { Pagination } from 'paginatedjs';
 import { faker } from '@faker-js/faker';
+import orderBy from 'lodash/orderBy';
+import map from 'lodash/map';
 
 /** Fake a look a like Laravel Pagination */
 const paginate = (records: Record<string, any>[], request: Request, baseUrl: string) => {
+
+    let postData = JSON.parse(request.requestBody);
+
+    if(postData) {
+        console.log('👉 Got Post from Fake API', postData)
+    }
+
     const total = records.length;
-    const perPage = Number(request.queryParams["perPage"] || 0);
-    const page = Number(request.queryParams["page"] || 1);
-    const paginationInstance = new Pagination(records,perPage)
+    const perPage = Number(request.queryParams["perPage"] || postData.perPage || 0);
+    const page = Number(request.queryParams["page"] ||  postData.page || 1);
+    const paginationInstance = new Pagination(records,perPage);
 
     paginationInstance.goToPage(page);
 
@@ -16,10 +25,20 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
     const hasPreviousPage = paginationInstance.pageNumber > 1;
     const nextPage = paginationInstance.pageNumber+1;
     const previousPage = paginationInstance.pageNumber-1;
-    const items = paginationInstance.getPaginated(true);
+    let items = paginationInstance.getPaginated(true);
     const totalPages = paginationInstance.nbPages;
     const showingFrom = (Number(page) -1) * Number(perPage);
     const showTo = showingFrom+perPage;
+
+    // Apply Sorting
+    if(postData.sorting) {
+        const pluckColumns = postData.sorting.map(a => a.column);
+        const pluckDirections = postData.sorting.map(a => a.direction);
+        items = orderBy(items, pluckColumns, pluckDirections);
+        console.log('👉 Sorting, Demo only supports',pluckColumns, pluckDirections, items)
+    }
+
+    // Apply Filters
 
     let pagesList = [];
     for (let i = 1; i < totalPages; i++) {
@@ -79,8 +98,16 @@ export function makeServer({ environment = "development" } = {}) {
         },
 
         routes() {
-            this.get("/datatable/rest/", (schema,request) => {
 
+            this.get("/datatable/rest/", (schema,request) => {
+                return paginate(
+                    schema.db.payments,
+                    request,
+                    '/datatable/rest'
+                )
+            });
+
+            this.post("/datatable/rest/", (schema,request) => {
                 return paginate(
                     schema.db.payments,
                     request,

@@ -27,15 +27,15 @@ export default defineComponent({
 				onMounted(() => window.parent.postMessage('mounted', '*'));
 
 				// Function to grab data
-				const fetchData = (query, nextPage) => {
-						const url = `https://www.omdbapi.com/?apikey=e1b3617e&s=${query}&page=${nextPage || 1}`;
-						return fetch(url)
-								.then((response) => response.json())
-								.then((data) => ({
-										results: data.Search,
-										hasMorePages: data.Search && data.totalResults > (data.Search.length * (nextPage || 1)) * 10,
-								}));
-				};
+				// const fetchData = (query, nextPage) => {
+				// 		const url = `https://www.omdbapi.com/?apikey=e1b3617e&s=${query}&page=${nextPage || 1}`;
+				// 		return fetch(url)
+				// 				.then((response) => response.json())
+				// 				.then((data) => ({
+				// 						results: data.Search,
+				// 						hasMorePages: data.Search && data.totalResults > (data.Search.length * (nextPage || 1)) * 10,
+				// 				}));
+				// };
 
 				// Options
 				const options = {
@@ -214,7 +214,7 @@ export default defineComponent({
 						filters,
 						perPageItemsOptions,
 						poolingOptions,
-						fetchData,
+						//fetchData,
 						config
 				}
 
