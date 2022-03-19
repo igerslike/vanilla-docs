@@ -167,8 +167,8 @@ export default defineComponent({
 
 						selectRows: 'You currently have :rows payments selected',
 						selectedUndo: 'Deselect',
-						selectAllOr: 'Select current page or',
-						selectAllMatching: 'Select all records matching filter',
+						selectAllOr: ' or ',
+						selectAllMatching: 'Select all :rows records matching filter',
 						selectAllMatchingUndo: 'Select only current page',
 
 						filters: 'Filters',
