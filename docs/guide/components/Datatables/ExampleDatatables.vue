@@ -52,7 +52,7 @@ export default defineComponent({
 				const columns = [
 						{
 								name: 'id',
-								label: '#',
+								label: 'ID',
 								sortable: true,
 								native: true,
 								hidden: false,
@@ -165,11 +165,11 @@ export default defineComponent({
 						search: 'Search',
 						searchPlaceholder: 'Search your latest Payments',
 
-						selectRows: 'You currently have :rows payments selected',
+						selectRows: 'You currently have :rows payments selected ',
 						selectedUndo: 'Deselect',
 						selectAllOr: ' or ',
-						selectAllMatching: 'Select all :rows records matching filter',
-						selectAllMatchingUndo: 'Select only current page',
+						selectAllMatching: 'Select :rows matching',
+						selectAllMatchingUndo: 'Undo select all :rows',
 
 						filters: 'Filters',
 						filtersWithEmptyData: 'Oops, seems like there is no records after filtering',
@@ -177,6 +177,10 @@ export default defineComponent({
 
 						recordsEmpty: 'Seems like its quiet here! No Records were found',
 						settingsPerPage: ':count Items per page',
+
+						showingFrom: 'Showing :from to :to of :total results',
+						nextPage: 'Next',
+						previousPage: 'Previous',
 				}
 
 				// Per Page Options
