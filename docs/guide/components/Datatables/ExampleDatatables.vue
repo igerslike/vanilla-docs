@@ -11,16 +11,26 @@
 						:filters="filters"
 						:fetch-endpoint="'/datatable/rest'"
 						:actions-endpoint="'/datatable/actions'"
-				/>
+				>
+						<template #rowId="{result, resultRaw}">
+								<span>{{ result }} foo</span>
+						</template>
+
+						<template #actionDeleteItems="{action}">
+								<VanillaDropdownOption>{{ action.name }} - Im changed</VanillaDropdownOption>
+						</template>
+
+				</VanillaDatatable>
 		</div>
 </template>
 <script type="ts">
-import {VanillaDatatable} from '@indigit/vanilla-components';
+import {VanillaDatatable, VanillaDropdownOption} from '@indigit/vanilla-components';
 import {onMounted, defineComponent} from 'vue';
 export default defineComponent({
 		name: 'ExampleDatatables',
 		components: {
-				VanillaDatatable
+				VanillaDatatable,
+				VanillaDropdownOption
 		},
 		setup(props){
 
@@ -93,6 +103,43 @@ export default defineComponent({
 						{
 								name: 'delete-items',
 								label: 'Deleted Items',
+								permissions: {
+										execute: true,
+										view: true,
+								},
+								before: {
+										confirm: {
+												enable: true,
+												options: {
+														title: 'Delete Payments?',
+														subtitle: undefined,
+														text: 'Are you sure you want to delete all the selected payments?',
+														icon: undefined,
+														confirmButton: 'Yes, go on',
+														cancelButton: 'No, take me back.',
+												}
+										},
+										callback: () => {
+												console.log('Im being executed before')
+										}
+								},
+								after: {
+										clearSelected: true,
+										resetFilters: false,
+										pooling: {
+												enable: true,
+												interval: 5,
+												during: 120,
+												stopWhenDataChanges: false
+										},
+										callback: () => {
+												console.log('Im being executed after')
+										}
+								}
+						},
+						{
+								name: 'copy-items',
+								label: 'Copy Items',
 								permissions: {
 										execute: true,
 										view: true,
