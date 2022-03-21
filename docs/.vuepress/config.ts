@@ -7,6 +7,10 @@ export default {
   serviceWorker: true,
   theme: path.resolve(__dirname, './theme'),
   port: 3000,
+  head: [
+    //['link', {href: 'https://fonts.googleapis.com/css?family=Nunito:400,600,700', rel: 'stylesheet'}],
+    ['link', {href: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap', rel: 'stylesheet'}],
+  ],
   themeConfig: {
     docsDir: 'docs',
     darkMode: true,

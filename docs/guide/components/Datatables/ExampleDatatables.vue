@@ -17,7 +17,7 @@
 						</template>
 
 						<template #actionDeleteItems="{action}">
-								<VanillaDropdownOption>{{ action.name }} - Im changed</VanillaDropdownOption>
+								{{ action.name }} - Im change
 						</template>
 
 				</VanillaDatatable>
@@ -110,29 +110,33 @@ export default defineComponent({
 								before: {
 										confirm: {
 												enable: true,
-												options: {
-														title: 'Delete Payments?',
-														subtitle: undefined,
-														text: 'Are you sure you want to delete all the selected payments?',
-														icon: undefined,
-														confirmButton: 'Yes, go on',
-														cancelButton: 'No, take me back.',
+												title: 'Delete Payments?',
+												subtitle: undefined,
+												text: 'Are you sure you want to :name all the :itemsSelected selected payments? Please confirm.',
+												icon: undefined,
+												confirmButton: 'Yes, go on',
+												cancelButton: 'No, take me back.',
+												safe: true,
+												classes: {
+														title: '',
+														text: '',
+														icon: '',
 												}
 										},
-										callback: () => {
-												console.log('Im being executed before')
+										callback: (action) => {
+												console.log('Im being executed before on the action', action)
 										}
 								},
 								after: {
 										clearSelected: true,
 										resetFilters: false,
 										pooling: {
-												enable: true,
+												enable: false,
 												interval: 5,
 												during: 120,
 												stopWhenDataChanges: false
 										},
-										callback: () => {
+										callback: (action) => {
 												console.log('Im being executed after')
 										}
 								}
@@ -147,17 +151,15 @@ export default defineComponent({
 								before: {
 										confirm: {
 												enable: true,
-												options: {
-														title: 'Delete Payments?',
-														subtitle: undefined,
-														text: 'Are you sure you want to delete all the selected payments?',
-														icon: undefined,
-														confirmButton: 'Yes, go on',
-														cancelButton: 'No, take me back.',
-												}
+												title: 'Delete Payments?',
+												subtitle: undefined,
+												text: 'Are you sure you want to delete all the selected payments?',
+												icon: undefined,
+												confirmButton: 'Yes, go on',
+												cancelButton: 'No, take me back.',
 										},
-										callback: () => {
-												console.log('Im being executed before')
+										callback: (action) => {
+												console.log('Im being executed before on the action', action)
 										}
 								},
 								after: {
@@ -169,7 +171,7 @@ export default defineComponent({
 												during: 120,
 												stopWhenDataChanges: false
 										},
-										callback: () => {
+										callback: (action) => {
 												console.log('Im being executed after')
 										}
 								}
@@ -208,6 +210,12 @@ export default defineComponent({
 
 						actionsButton: 'Actions',
 						actionsSelectedRows: 'With :rows selected',
+
+						actionConfirmTitle: 'Confirm your action',
+						actionConfirmText: 'Are you sure you want to :name on the :itemsSelected item(s) selected? Please confirm',
+						actionConfirmButton: 'Yes, I\'v Confirmed',
+						actionCancelButton: 'Nah, Cancel',
+
 
 						search: 'Search',
 						searchPlaceholder: 'Search your latest Payments',
