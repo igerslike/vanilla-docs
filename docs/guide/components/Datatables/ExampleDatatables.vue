@@ -13,11 +13,11 @@
 						:actions-endpoint="'/datatable/actions'"
 				>
 						<template #rowId="{result, resultRaw}">
-								<span>{{ result }} foo</span>
+								<span><b>{{ result }}</b></span>
 						</template>
 
 						<template #actionDeleteItems="{action}">
-								{{ action.name }} - Im change
+								{{ action.name }}
 						</template>
 
 				</VanillaDatatable>
