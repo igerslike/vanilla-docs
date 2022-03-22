@@ -9,15 +9,15 @@
 						:actions="actions"
 						:per-page-options="perPageItemsOptions"
 						:filters="filters"
-						:fetch-endpoint="'/datatable/rest'"
-						:actions-endpoint="'/datatable/actions'"
+						:fetch-endpoint="'/datatables'"
+						:actions-endpoint="'/datatables'"
 				>
 						<template #rowId="{result, resultRaw}">
-								<span><b>{{ result }}</b></span>
+								<span><u>{{ result }}</u></span>
 						</template>
 
 						<template #actionDeleteItems="{action}">
-								{{ action.name }}
+								<TrashIcon class="h-4 w-4"/><span>{{ action.label }}</span>
 						</template>
 
 				</VanillaDatatable>
@@ -26,11 +26,13 @@
 <script type="ts">
 import {VanillaDatatable, VanillaDropdownOption} from '@indigit/vanilla-components';
 import {onMounted, defineComponent} from 'vue';
+import { TrashIcon } from '@heroicons/vue/outline'
 export default defineComponent({
 		name: 'ExampleDatatables',
 		components: {
 				VanillaDatatable,
-				VanillaDropdownOption
+				VanillaDropdownOption,
+				TrashIcon
 		},
 		setup(props){
 
@@ -205,11 +207,11 @@ export default defineComponent({
 
 				// Per Page Options
 				const perPageItemsOptions = [
-						{value: 5, label: '5 Items per page'},
-						{value: 10, label: '10 Items per page'},
-						{value: 50, label: '50 Items per page'},
-						{value: 100, label: '100 Items per page'},
-						{value: 300, label: '300 Items per page'},
+						{value: 5, text: '5 Items per page'},
+						{value: 10, text: '10 Items per page'},
+						{value: 50, text: '50 Items per page'},
+						{value: 100, text: '100 Items per page'},
+						{value: 300, text: '300 Items per page'},
 				]
 
 				const poolingOptions = {

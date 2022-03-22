@@ -3,7 +3,9 @@ import {createServer, Model, Factory, Request} from "miragejs";
 import { Pagination } from 'paginatedjs';
 import { faker } from '@faker-js/faker';
 import orderBy from 'lodash/orderBy';
-import map from 'lodash/map';
+import each from 'lodash/each';
+import Fuse from 'fuse.js';
+import Ref from 'vue';
 
 /** Fake a look a like Laravel Pagination */
 const paginate = (records: Record<string, any>[], request: Request, baseUrl: string) => {
@@ -12,6 +14,38 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
 
     if(postData) {
         console.log('👉 Got Post from Fake API', postData)
+    }
+
+    // Search the items function
+    const search = (query: string, collection: ReadonlyArray<unknown>) => {
+
+        const options = {
+            includeScore: false,
+            threshold: 0.3,
+            keys: [
+                'id',
+                'gateway',
+                'amount',
+                'status'
+            ],
+        };
+
+        const fuse = new Fuse(collection, options);
+        const results = fuse.search(query);
+        const filtered = [] as string[];
+
+        each(results, (result: object) => {
+            filtered.push(result.item);
+        });
+
+        return filtered;
+    }
+
+    // Search the items
+    const searchQuery = request.queryParams["search"] || postData.search || null;
+    if(searchQuery !== null) {
+        console.log('🔍 Searching', searchQuery);
+        records = search(searchQuery, records);
     }
 
     const total = records.length;
@@ -35,11 +69,10 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
         const pluckColumns = postData.sorting.map(a => a.column);
         const pluckDirections = postData.sorting.map(a => a.direction);
         items = orderBy(items, pluckColumns, pluckDirections);
-        console.log('👉 Sorting, Demo only supports',pluckColumns, pluckDirections, items)
+        //console.log('👉 Sorting, Demo only supports',pluckColumns, pluckDirections, items)
     }
 
     // Apply Filters
-
     let pagesList = [];
     for (let i = 1; i < totalPages; i++) {
         pagesList.push({
@@ -71,11 +104,9 @@ export function makeServer({ environment = "development" } = {}) {
         environment,
         logging: false,
         trackRequests: false,
-
         models: {
             payment: Model,
         },
-
         factories: {
             payment: Factory.extend({
                 id(i){
@@ -92,28 +123,17 @@ export function makeServer({ environment = "development" } = {}) {
                 }
             }),
         },
-
         seeds(server) {
             server.createList('payment', 1000)
         },
-
         routes() {
-
-            this.get("/datatable/rest/", (schema,request) => {
+            this.post("/datatables", (schema,request) => {
                 return paginate(
                     schema.db.payments,
                     request,
-                    '/datatable/rest'
+                    '/datatables'
                 )
             });
-
-            this.post("/datatable/rest/", (schema,request) => {
-                return paginate(
-                    schema.db.payments,
-                    request,
-                    '/datatable/rest'
-                )
-            })
         },
     });
 }

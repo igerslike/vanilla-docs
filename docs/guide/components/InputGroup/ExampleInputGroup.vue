@@ -2,8 +2,8 @@
 		<VanillaCard
 				as="form"
 				title="Registration"
+				variant="simple"
 				subtitle="Register your account on Vanilla Components"
-				class="sm:divide-y sm:divide-gray-200 dark:divide-gray-800 bg-gray-50 dark:bg-gray-800/50"
 		>
 				<VanillaInputGroup
 						label="Address"
@@ -98,8 +98,8 @@ import {
 		VanillaSelect,
 		VanillaCheckbox,
 		VanillaFormLabel,
-		VanillaCardFooter,
 		VanillaButton,
+		VanillaFormSection,
 } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 
