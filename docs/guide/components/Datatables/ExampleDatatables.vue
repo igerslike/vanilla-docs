@@ -111,7 +111,7 @@ export default defineComponent({
 										confirm: {
 												enable: true,
 												title: 'Delete Payments?',
-												subtitle: undefined,
+												subtitle: 'Something',
 												text: 'Are you sure you want to :name all the :itemsSelected selected payments? Please confirm.',
 												icon: undefined,
 												confirmButton: 'Yes, go on',
@@ -132,41 +132,6 @@ export default defineComponent({
 										resetFilters: false,
 										pooling: {
 												enable: false,
-												interval: 5,
-												during: 120,
-												stopWhenDataChanges: false
-										},
-										callback: (action) => {
-												console.log('Im being executed after')
-										}
-								}
-						},
-						{
-								name: 'copy-items',
-								label: 'Copy Items',
-								permissions: {
-										execute: true,
-										view: true,
-								},
-								before: {
-										confirm: {
-												enable: true,
-												title: 'Delete Payments?',
-												subtitle: undefined,
-												text: 'Are you sure you want to delete all the selected payments?',
-												icon: undefined,
-												confirmButton: 'Yes, go on',
-												cancelButton: 'No, take me back.',
-										},
-										callback: (action) => {
-												console.log('Im being executed before on the action', action)
-										}
-								},
-								after: {
-										clearSelected: true,
-										resetFilters: false,
-										pooling: {
-												enable: true,
 												interval: 5,
 												during: 120,
 												stopWhenDataChanges: false
@@ -255,12 +220,14 @@ export default defineComponent({
 				};
 
 				const config = {
+						name: 'ExampleDatatable',
+						primaryKey: 'exampleDatatable',
 						columns: columns,
-						options: options,
-						translations: translations,
 						actions: actions,
 						filters: filters,
-						perPageItemsOptions: perPageItemsOptions,
+						options: options,
+						translations: translations,
+						perPageOptions: perPageItemsOptions,
 						pooling: poolingOptions,
 						//fetchData: fetchData,
 				};
