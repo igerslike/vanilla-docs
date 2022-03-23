@@ -80,7 +80,7 @@
 				</VanillaInputGroup>
 
 				<VanillaInputGroup layout="content">
-					<span class="text-sm text-center">Enjoyed it? Star us on Github</span>
+					<span class="inline-flex text-sm text-center">Enjoyed it? Star us on Github</span>
 				</VanillaInputGroup>
 
 				<template #footerActions>

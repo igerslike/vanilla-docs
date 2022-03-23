@@ -1,5 +1,5 @@
 <template>
-		<div class="h-[500px]">
+		<div class="h-[800px]">
 				<VanillaDatatable
 						:config="config"
 						:unique-name="'payments'"
