@@ -149,7 +149,7 @@ export default defineComponent({
 						{
 								name: 'id',
 								label: 'Filter by ID',
-								component: 'VanillaInputText',
+								component: 'VanillaInput',
 								placeholder: 'Ex: 1,2,3',
 								value: undefined,
 								defaultValue: undefined,
@@ -157,14 +157,26 @@ export default defineComponent({
 								rules: []
 						},
 						{
-								name: 'name',
-								label: 'Filter by ID',
-								component: 'VanillaInputText',
-								placeholder: 'Ex: 1,2,3',
+								name: 'amount',
+								label: 'Filter by Amount',
+								component: 'VanillaInput',
+								placeholder: 'Your name',
 								value: undefined,
 								defaultValue: undefined,
 								options: [],
-								rules: []
+						},
+						{
+								name: 'gateway',
+								label: 'Gateway',
+								component: 'VanillaSelect',
+								placeholder: 'Payment Gateway',
+								value: undefined,
+								defaultValue: undefined,
+								options: [
+										{value: 'Paypal', text: 'Paypal'},
+										{value: 'Bitcoin', text: 'Bitcoin'},
+										{value: 'Ethereum', text: 'Ethereum'},
+								],
 						},
 				]
 
