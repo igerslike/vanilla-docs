@@ -235,7 +235,7 @@ export default defineComponent({
 
 				const config = {
 						name: 'ExampleDatatable',
-						primaryKey: 'exampleDatatable',
+						primaryKey: 'id',
 						columns: columns,
 						actions: actions,
 						filters: filters,
