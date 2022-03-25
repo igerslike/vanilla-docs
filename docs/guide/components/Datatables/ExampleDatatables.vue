@@ -151,7 +151,7 @@ export default defineComponent({
 								label: 'Filter by ID',
 								component: 'VanillaInput',
 								placeholder: 'Ex: 1,2,3',
-								value: undefined,
+								value: 5,
 								defaultValue: undefined,
 								options: [],
 								rules: []
