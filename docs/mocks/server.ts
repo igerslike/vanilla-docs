@@ -66,7 +66,8 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
 
     const total = records.length;
     const perPage = Number(request.queryParams["perPage"] || postData.perPage || 0);
-    const page = Number(request.queryParams["page"] ||  postData.page || 1);
+    const page = Number(request.queryParams["page"] || 1);
+
     const paginationInstance = new Pagination(records,perPage);
 
     paginationInstance.goToPage(page);
