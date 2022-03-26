@@ -12,6 +12,7 @@
     "docs:build": "vuepress build docs"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.178",
     "@vuepress/bundler-vite": "^2.0.0-beta.27",
     "@vuepress/bundler-webpack": "^2.0.0-beta.27",
     "@vuepress/cli": "^2.0.0-alpha.8",
@@ -21,8 +22,7 @@
     "markdown-it-include": "^2.0.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
-    "postcss-nested": "^5.0.6",
-    "@types/lodash": "^4.14.178"
+    "postcss-nested": "^5.0.6"
   },
   "dependencies": {
     "@faker-js/faker": "^6.0.0",
@@ -30,6 +30,9 @@
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.0",
+    "collect.js": "^4.32.0",
+    "fuse.js": "^6.4.6",
+    "lodash": "^4.17.21",
     "mini-svg-data-uri": "^1.4.3",
     "miragejs": "^0.1.43",
     "msw": "^0.39.2",
@@ -37,9 +40,7 @@
     "paginatedjs": "^1.1.1",
     "tailwindcss": "^3.0.16",
     "vuepress": "^2.0.0-beta.36",
-    "vuepress-plugin-demoblock-plus": "^1.5.1",
-    "fuse.js": "^6.4.6",
-    "lodash": "^4.17.21"
+    "vuepress-plugin-demoblock-plus": "^1.5.1"
   },
   "msw": {
     "workerDirectory": "docs/.vuepress/public"

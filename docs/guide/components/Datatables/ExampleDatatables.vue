@@ -152,7 +152,7 @@ export default defineComponent({
 								component: 'VanillaInput',
 								placeholder: 'Ex: 1,2,3',
 								value: 5,
-								defaultValue: undefined,
+								defaultValue: 5,
 								options: [],
 								rules: []
 						},
@@ -160,7 +160,7 @@ export default defineComponent({
 								name: 'amount',
 								label: 'Filter by Amount',
 								component: 'VanillaInput',
-								placeholder: 'Your name',
+								placeholder: 'Amount',
 								value: undefined,
 								defaultValue: undefined,
 								options: [],

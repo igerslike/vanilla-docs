@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 import orderBy from 'lodash/orderBy';
 import each from 'lodash/each';
 import Fuse from 'fuse.js';
-import Ref from 'vue';
+import collect from 'collect.js';
 
 /** Fake a look a like Laravel Pagination */
 const paginate = (records: Record<string, any>[], request: Request, baseUrl: string) => {
@@ -13,7 +13,7 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
     let postData = JSON.parse(request.requestBody);
 
     if(postData) {
-        console.log('👉 Got Post from Fake API', postData)
+        console.log('[REST] Got Post from Fake API', postData)
     }
 
     // Search the items function
@@ -41,11 +41,27 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
         return filtered;
     }
 
+    const filterRecords = (filters: object, collection: ReadonlyArray<unknown>) => {
+        let ourCollection = collect(collection);
+
+        Object.entries(filters).forEach(([key, value]) => {
+            ourCollection = ourCollection.where(key,value);
+        });
+
+        return ourCollection.all();
+    };
+
     // Search the items
     const searchQuery = request.queryParams["search"] || postData.search || null;
     if(searchQuery !== null) {
-        console.log('🔍 Searching', searchQuery);
+        console.log('[REST] 🔍 Searching', searchQuery);
         records = search(searchQuery, records);
+    }
+
+    const userFilters = request.queryParams["filters"] || postData.filters || null;
+    if(userFilters !== null && Object.keys(userFilters).length > 0) {
+        console.log('[REST] ⛵ Filtering', userFilters);
+        records = filterRecords(userFilters, records);
     }
 
     const total = records.length;
@@ -69,7 +85,7 @@ const paginate = (records: Record<string, any>[], request: Request, baseUrl: str
         const pluckColumns = postData.sorting.map(a => a.column);
         const pluckDirections = postData.sorting.map(a => a.direction);
         items = orderBy(items, pluckColumns, pluckDirections);
-        //console.log('👉 Sorting, Demo only supports',pluckColumns, pluckDirections, items)
+        console.log('[REST] 👉 Sorting, Demo only supports',pluckColumns, pluckDirections)
     }
 
     // Apply Filters
