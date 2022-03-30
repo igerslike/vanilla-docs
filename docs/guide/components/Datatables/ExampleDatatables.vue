@@ -24,7 +24,7 @@
 		</div>
 </template>
 <script type="ts">
-import {VanillaDatatable, VanillaDropdownOption, VanillaDatatableFilters} from '@indigit/vanilla-components';
+import {VanillaDatatable, VanillaDropdownOption, VanillaDatatableOptions } from '@indigit/vanilla-components';
 import {onMounted, defineComponent} from 'vue';
 import { TrashIcon } from '@heroicons/vue/outline'
 export default defineComponent({
@@ -58,7 +58,7 @@ export default defineComponent({
 						showTotalItems: true,
 						compact: false,
 						striped: false,
-				}
+				} as VanillaDatatableOptions
 
 				// Columns
 				const columns = [
