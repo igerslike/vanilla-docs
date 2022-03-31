@@ -1,6 +1,6 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+:root{
+  --content-width: 950px;
+}
 
 @import "@vuepress/theme-default/lib/client/styles/arrow";
 @import "@vuepress/theme-default/lib/client/styles/badge";
@@ -16,5 +16,6 @@
 @import "@vuepress/theme-default/lib/client/styles/sidebar";
 @import "@vuepress/theme-default/lib/client/styles/toc";
 @import "@vuepress/theme-default/lib/client/styles/transitions";
+
 
 .theme-default-content{}

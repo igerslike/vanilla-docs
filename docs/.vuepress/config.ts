@@ -7,6 +7,10 @@ export default {
   serviceWorker: true,
   theme: path.resolve(__dirname, './theme'),
   port: 3000,
+  head: [
+    //['link', {href: 'https://fonts.googleapis.com/css?family=Nunito:400,600,700', rel: 'stylesheet'}],
+    ['link', {href: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap', rel: 'stylesheet'}],
+  ],
   themeConfig: {
     docsDir: 'docs',
     darkMode: true,
@@ -41,6 +45,7 @@ export default {
           { text: 'Dialog ( Modal )', link: '/guide/components/Dialog' },
           { text: 'Card', link: '/guide/components/Card' },
           { text: 'Input Group', link: '/guide/components/InputGroup' },
+          { text: 'Datatables', link: '/guide/components/Datatables' },
         ],
       },
     ],
@@ -68,6 +73,9 @@ export default {
   bundler: '@vuepress/bundler-vite',
   bundlerConfig: {
       viteOptions: {
+        global: {
+
+        },
         optimizeDeps: {
           //exclude: ['@indigit/vanilla-components']
         },
