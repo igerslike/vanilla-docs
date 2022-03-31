@@ -34,7 +34,6 @@ import {
 		VanillaCard,
 		VanillaDropdown,
 		VanillaDropdownOption,
-		VanillaCardFooter,
 		VanillaButton,
 } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';

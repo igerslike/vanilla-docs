@@ -99,7 +99,6 @@ import {
 		VanillaCheckbox,
 		VanillaFormLabel,
 		VanillaButton,
-		VanillaFormSection,
 } from '@indigit/vanilla-components';
 import { onMounted, ref, defineComponent } from 'vue';
 

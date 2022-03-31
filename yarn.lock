@@ -43,15 +43,18 @@
   resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-1.0.6.tgz#d8b90734b436eb5a87f40cc300b64a0fb0031f7f"
   integrity sha512-ng2YcCQrdoQWEFpw+ipFl2rZo8mZ56v0T5+MyfQQvNqfKChwgP6DMloZLW+rl17GEcHkE3H82UTAMKBKZr4+WA==
 
-"@indigit/vanilla-components@0.6.16":
-  version "0.6.16"
-  resolved "https://registry.yarnpkg.com/@indigit/vanilla-components/-/vanilla-components-0.6.16.tgz#5f33705197a962625630d7832317d267c3de125a"
-  integrity sha512-apk3g5dnn7UV7j7b2v1XdAjAJzgLMFthmPtNfk/BIR1TQ1gREUcYHChJ+avVoAEyjs89Hm4E+y/hd5XFBMUouQ==
+"@indigit/vanilla-components@0.6.17":
+  version "0.6.17"
+  resolved "https://registry.yarnpkg.com/@indigit/vanilla-components/-/vanilla-components-0.6.17.tgz#cc6af30b82de4133fa0fb1728aee45fdcfdb882c"
+  integrity sha512-3v+fvmMeQDCOCd38RiF76u++BM0rCSZuxqar/sr2L1HCc91ey6dKP9mlm6fCvAvDe7EY6zVWo13Ln8huwMP/Kw==
   dependencies:
     "@headlessui/vue" "^1.5.0"
     "@heroicons/vue" "^1.0.1"
     "@popperjs/core" "^2.11.2"
     "@variantjs/vue" "^0.0.21"
+    "@vueuse/core" "^8.1.2"
+    axios "^0.26.1"
+    crypto-js "^4.1.1"
     flatpickr "^4.6.9"
     fuse.js "^6.4.6"
     libphonenumber-js "^1.9.49"
@@ -860,10 +863,31 @@
     "@vueuse/shared" "7.7.1"
     vue-demi "*"
 
+"@vueuse/core@^8.1.2":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-8.2.1.tgz#cc7be42b3d84816bbeab1e30fd95c62895c05945"
+  integrity sha512-vsci465GXLykmEzVc8gNgVZoF9G+WEVXu7AM+6hgga2SgZQE1CSCnSFN5ZCIQUEd0SGHxpvw3Q0NkddJbCya7w==
+  dependencies:
+    "@vueuse/metadata" "8.2.1"
+    "@vueuse/shared" "8.2.1"
+    vue-demi "*"
+
+"@vueuse/metadata@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-8.2.1.tgz#5385f136c243f55b74bb26ea2a9bd53662be7df1"
+  integrity sha512-t4EGSzUWzYADC1J3VAviwyolS/NiYiBiJ58PObsZ9X/OV5OWzXEFSvxAV7J50M2DgLNWQf2Wgbepyshl5KyrFQ==
+
 "@vueuse/shared@7.7.1":
   version "7.7.1"
   resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-7.7.1.tgz"
   integrity sha512-rN2qd22AUl7VdBxihagWyhUNHCyVk9IpvBTTfHoLH9G7rGE552X1f+zeCfehuno0zXif13jPw+icW/wn2a0rnQ==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@8.2.1":
+  version "8.2.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-8.2.1.tgz#21fb20164e4498cea38aa4220117c5f44c352403"
+  integrity sha512-esnLayEO/H0t6NG35tJDNJYZq+dFEdlBA7uTDv3NoIK+rqQIuegP95cNRDolAiUc7fA48OqVOA1RF+KnK/JORA==
   dependencies:
     vue-demi "*"
 
@@ -1198,6 +1222,13 @@ axios@^0.24.0:
   integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
   dependencies:
     follow-redirects "^1.14.4"
+
+axios@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.26.1.tgz#1ede41c51fcf51bbbd6fd43669caaa4f0495aaa9"
+  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
+  dependencies:
+    follow-redirects "^1.14.8"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -1600,6 +1631,11 @@ crypt@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
   integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
+
+crypto-js@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.1.1.tgz#9e485bcf03521041bd85844786b83fb7619736cf"
+  integrity sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==
 
 css-loader@^6.5.1:
   version "6.7.1"
@@ -2381,9 +2417,9 @@ flatpickr@^4.6.9:
   resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.10.tgz#6f581fdf8ebba83766457c7ddae36cc4ec983811"
   integrity sha512-Z1rNbMAg7WmKPBVj0cOjO/4Ab5H3Of5MMohgVvJpFiEAcWFUcaGgN5yzizKGUUN1j6zXYeYASI2XxqrhbiRoig==
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.4:
+follow-redirects@^1.0.0, follow-redirects@^1.14.4, follow-redirects@^1.14.8:
   version "1.14.9"
-  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.9.tgz"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
   integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 forwarded@0.2.0:
