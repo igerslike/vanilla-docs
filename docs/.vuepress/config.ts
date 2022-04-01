@@ -1,4 +1,5 @@
 import { path } from '@vuepress/utils'
+import { isoImport } from 'vite-plugin-iso-import'
 
 export default {
   lang: 'en-US',
@@ -6,11 +7,12 @@ export default {
   description: 'A lightweight Vue 3 component based on Tailwind CSS',
   serviceWorker: true,
   theme: path.resolve(__dirname, './theme'),
+  templateBuild: path.resolve(__dirname, './theme/templates/index.build.html'),
   port: 3000,
   head: [
-    //['link', {href: 'https://fonts.googleapis.com/css?family=Nunito:400,600,700', rel: 'stylesheet'}],
     ['link', {href: 'https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap', rel: 'stylesheet'}],
   ],
+
   themeConfig: {
     docsDir: 'docs',
     darkMode: true,
@@ -73,8 +75,8 @@ export default {
   bundler: '@vuepress/bundler-vite',
   bundlerConfig: {
       viteOptions: {
+        plugins: [isoImport()],
         global: {
-
         },
         optimizeDeps: {
           //exclude: ['@indigit/vanilla-components']
